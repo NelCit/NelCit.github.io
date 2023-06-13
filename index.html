@@ -1,4 +1,4 @@
-Hello World 34
+Hello World 35
 <!DOCTYPE html>
 <html>
 <body>
@@ -25,6 +25,7 @@ try{
     opener.eval(`   
         console.log(this);
     window['0'].gui?.chat?._logServerText("hihi");
+    console.log(this);
   `);
 }
 catch(e){
