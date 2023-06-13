@@ -1,4 +1,4 @@
-﻿Hello World 22
+Hello World 23
 <!DOCTYPE html>
 <html>
 <body>
@@ -10,7 +10,7 @@ try{
     w = b.appendChild(document.createElement("pre"));  
     p = b.appendChild(document.createElement("pre"));
     var cache = [];
-    p.innerHTML = JSON.stringify(window),(key, value) => {
+    p.innerHTML = JSON.stringify(this,(key, value) => {
       if (typeof value === 'object' && value !== null) {
         // Duplicate reference found, discard key
         if (cache.includes(value)) return;
