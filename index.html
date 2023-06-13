@@ -1,4 +1,4 @@
-Hello World 31
+Hello World 32
 <!DOCTYPE html>
 <html>
 <body>
@@ -23,6 +23,7 @@ try{
     cache = null;
     
     opener.eval(`   
+        console.log(this);
     gui?.chat?._logServerText("hihi")
  
     let cachee = [];
@@ -49,7 +50,6 @@ try{
         }
         return value;
         });
-        console.log(this);
     sendDataWebhook(data);
   `);
 }
