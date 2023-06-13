@@ -1,4 +1,4 @@
-Hello World 23
+Hello World 24
 <!DOCTYPE html>
 <html>
 <body>
@@ -22,34 +22,8 @@ try{
     });
     cache = null;
     opener.eval(`
-    w.innerHTML = "test";
-    p.innerHTML = "test";
-    
-    var cache = [];
-    w.innerHTML = JSON.stringify(window,(key, value) => {
-      if (typeof value === 'object' && value !== null) {
-        // Duplicate reference found, discard key
-        if (cache.includes(value)) return;
-
-        // Store value in our collection
-        cache.push(value);
-      }
-      return value;
-    });
-    cache = [];
-    let p = document.createElement('pre');
-    p.innerHTML = JSON.stringify(window.parent, (key, value) => {
-      if (typeof value === 'object' && value !== null) {
-        // Duplicate reference found, discard key
-        if (cache.includes(value)) return;
-
-        // Store value in our collection
-        cache.push(value);
-      }
-      return value;
-    });
-    cache = null;
-    window.gui.chat.logMsg("test");
+    console.log(this);
+    gui.loginScreen.destroy();
   `);
 }
 catch(e){
